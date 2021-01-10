@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+    backend_1:
+        image: rojgarimg:latest
+        volumes:
+            - storage:/app/storage
+
+    backend_2:
+        image: rojgarimg:latest
+        volumes:
+            - storage:/app/storage
+
+    backend_proxy:
+        image: nginx:alpine
+        volumes:
+            - ./rojgar.com.conf:/etc/nginx/conf.d/rojgar.com.conf
+        ports:
+            - 8080:8080
+volumes:
+    storage:

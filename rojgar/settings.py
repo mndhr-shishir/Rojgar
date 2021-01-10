@@ -25,7 +25,7 @@ SECRET_KEY = '%le#=u9!u$#ehjdx5bhyk2q%jca-6c)=rh#nit5-wv$7m_=a&b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'rojgar.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'storage', 'db.sqlite3'),
     }
 }
 
